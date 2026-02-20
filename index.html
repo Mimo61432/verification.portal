@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Verification Portal</title>
+
+<style>
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+background:radial-gradient(circle at top,#1b2233,#0b0f17);
+color:#e6e6e6;
+}
+
+/* Container */
+.container{
+max-width:500px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* Headings */
+.title{
+font-size:26px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.subtitle{
+color:#bfc6d4;
+font-size:15px;
+line-height:1.6;
+}
+
+/* Card Style */
+.card{
+background:rgba(255,255,255,0.05);
+border-radius:16px;
+padding:22px;
+margin-top:25px;
+backdrop-filter: blur(10px);
+}
+
+/* Highlight Box */
+.highlight{
+background:rgba(255,255,255,0.08);
+padding:18px;
+border-radius:14px;
+margin-top:18px;
+line-height:1.6;
+color:#d7dde8;
+}
+
+/* Button */
+button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:#f0b90b;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+margin-top:25px;
+}
+
+/* Hidden Page */
+.hidden{
+display:none;
+}
+
+/* Profile Card */
+.profile{
+display:flex;
+align-items:center;
+gap:15px;
+margin-top:15px;
+}
+
+.avatar{
+width:60px;
+height:60px;
+border-radius:50%;
+background:linear-gradient(145deg,#2a3144,#1a2030);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+color:#8b93a7;
+}
+
+/* Labels */
+.label{
+font-size:12px;
+color:#9aa3b2;
+margin-top:10px;
+}
+
+.value{
+font-size:15px;
+font-weight:500;
+}
+
+/* Verification Levels */
+.level{
+background:rgba(255,255,255,0.05);
+padding:14px;
+border-radius:12px;
+margin-top:12px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.completed{
+color:#7CFF9B;
+font-weight:600;
+}
+
+.progress{
+color:#f0b90b;
+font-weight:700;
+}
+
+.pending{
+color:#9aa3b2;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PAGE 1 (NOTICE) -->
+<div id="page1">
+
+<div class="title">Account Verification Notice</div>
+
+<div class="subtitle">
+Our internal compliance and jurisdictional alignment systems have identified that the crypto account is currently undergoing structured verification review.
+</div>
+
+<div class="highlight">
+A multi-layer verification sequence has been initiated to validate account ownership, jurisdiction mapping, and security compliance standards under the unified verification framework.
+</div>
+
+<div class="subtitle" style="margin-top:18px;">
+The verification process will proceed through multiple technical levels before final clearance is granted.
+</div>
+
+<button onclick="goToPage2()">Continue</button>
+
+</div>
+
+
+<!-- PAGE 2 (VERIFICATION DASHBOARD) -->
+<div id="page2" class="hidden">
+
+<div class="title">Verification Progress</div>
+
+<!-- Profile Card -->
+<div class="card">
+
+<div class="profile">
+<div class="avatar">👤</div>
+<div>
+<div class="label">Name</div>
+<div class="value">XXX</div>
+</div>
+</div>
+
+<div class="label">UID</div>
+<div class="value">XXX</div>
+
+<div class="label">Email ID</div>
+<div class="value">XXX</div>
+
+</div>
+
+<!-- Verification Levels -->
+<div class="card">
+
+<div class="level">
+<span>Level 1: Identity Initialization</span>
+<span class="completed">Completed</span>
+</div>
+
+<div class="level">
+<span>Level 2: Security Layer Check</span>
+<span class="completed">Completed</span>
+</div>
+
+<div class="level">
+<span>Level 3: Jurisdiction Mapping</span>
+<span class="completed">Completed</span>
+</div>
+
+<div class="level">
+<span>Level 4: Account Consistency Scan</span>
+<span class="completed">Completed</span>
+</div>
+
+<div class="level">
+<span>Level 5: Compliance Framework Sync</span>
+<span class="completed">Completed</span>
+</div>
+
+<div class="level">
+<span>Level 6: Advanced Verification Engine</span>
+<span class="progress">87% In Progress</span>
+</div>
+
+<div class="level">
+<span>Level 7: Risk Assessment Layer</span>
+<span class="pending">Pending</span>
+</div>
+
+<div class="level">
+<span>Level 8: Blockchain Activity Review</span>
+<span class="pending">Pending</span>
+</div>
+
+<div class="level">
+<span>Level 9: Regulatory Alignment Check</span>
+<span class="pending">Pending</span>
+</div>
+
+<div class="level">
+<span>Level 10: Final Security Clearance</span>
+<span class="pending">Pending</span>
+</div>
+
+<div class="level">
+<span>Level 11: Unified Verification Approval</span>
+<span class="pending">Pending</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+function goToPage2(){
+document.getElementById("page1").classList.add("hidden");
+document.getElementById("page2").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
